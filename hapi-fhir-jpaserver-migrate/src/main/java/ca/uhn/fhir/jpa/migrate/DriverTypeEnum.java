@@ -41,18 +41,15 @@ import java.sql.SQLException;
 public enum DriverTypeEnum {
 
 	H2_EMBEDDED("org.h2.Driver", false),
+	COCKROACHDB_20_1("org.postgresql.Driver", false),
 	DERBY_EMBEDDED("org.apache.derby.jdbc.EmbeddedDriver", true),
 	MARIADB_10_1("org.mariadb.jdbc.Driver", false),
-
+	MARIADB_10_3("org.mariadb.jdbc.Driver", false),
 	// Formerly com.mysql.jdbc.Driver
 	MYSQL_5_7("com.mysql.cj.jdbc.Driver", false),
-
 	POSTGRES_9_4("org.postgresql.Driver", false),
-
 	ORACLE_12C("oracle.jdbc.OracleDriver", false),
-
 	MSSQL_2012("com.microsoft.sqlserver.jdbc.SQLServerDriver", false),
-
 	;
 
 	private static final Logger ourLog = LoggerFactory.getLogger(DriverTypeEnum.class);
@@ -77,12 +74,18 @@ public enum DriverTypeEnum {
 			case H2_EMBEDDED:
 				retval = "h2.sql";
 				break;
+			case COCKROACHDB_20_1:
+				retval = "cockroachdb201.sql";
+				break;
 			case DERBY_EMBEDDED:
 				retval = "derbytenseven.sql";
 				break;
 			case MYSQL_5_7:
 			case MARIADB_10_1:
 				retval = "mysql57.sql";
+				break;
+			case MARIADB_10_3:
+				retval = "mariadb103.sql";
 				break;
 			case POSTGRES_9_4:
 				retval = "postgresql92.sql";

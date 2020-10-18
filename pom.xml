@@ -6,7 +6,7 @@
 	<groupId>ca.uhn.hapi.fhir</groupId>
 	<artifactId>hapi-fhir</artifactId>
 	<packaging>pom</packaging>
-	<version>5.1.0</version>
+	<version>5.1.1</version>
 	<name>HAPI-FHIR</name>
 	<description>An open-source implementation of the FHIR specification in Java.</description>
 	<url>https://hapifhir.io</url>
@@ -718,8 +718,7 @@
 		<jetty_version>9.4.30.v20200611</jetty_version>
 		<jsr305_version>3.0.2</jsr305_version>
 		<flyway_version>6.4.1</flyway_version>
-		<!--<hibernate_version>5.2.10.Final</hibernate_version>-->
-		<hibernate_version>5.4.14.Final</hibernate_version>
+		<hibernate_version>5.4.22.Final</hibernate_version>
 		<!-- Update lucene version when you update hibernate-search version -->
 		<hibernate_search_version>5.11.5.Final</hibernate_search_version>
 		<lucene_version>5.5.5</lucene_version>
@@ -1692,7 +1691,7 @@
 				<plugin>
 					<groupId>de.jpdigital</groupId>
 					<artifactId>hibernate54-ddl-maven-plugin</artifactId>
-					<version>2.3.0</version>
+					<version>2.4.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>

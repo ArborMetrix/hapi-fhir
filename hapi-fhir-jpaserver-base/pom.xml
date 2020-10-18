@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>ca.uhn.hapi.fhir</groupId>
 		<artifactId>hapi-deployable-pom</artifactId>
-		<version>5.1.0</version>
+		<version>5.1.1</version>
 		<relativePath>../hapi-deployable-pom/pom.xml</relativePath>
 	</parent>
 
@@ -650,10 +650,12 @@
 				<configuration>
 					<dialects>
 						<param>h2</param>
+						<param>cockroachdb201</param>
 						<param>derby_10_7</param>
 						<param>postgresql92</param>
 						<param>mysql57</param>
 						<param>mariadb</param>
+						<param>mariadb103</param>
 						<param>oracle12c</param>
 						<param>sqlserver2012</param>
 					</dialects>
